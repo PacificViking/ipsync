@@ -1,0 +1,13 @@
+[Unit]
+Description=syncs ip address with mongo server
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/docs/ipsync
+ExecStart=/home/ubuntu/docs/ipsync/mongoipsync.py
+# optional items below
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
